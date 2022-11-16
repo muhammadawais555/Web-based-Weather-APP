@@ -40,7 +40,7 @@
             var weekday = new Array(7);
             weekday[0] = "Sun";
             weekday[1] = "Mon";
-            weekday[2] = "Teu";
+            weekday[2] = "Tue";
             weekday[3] = "Wed";
             weekday[4] = "Thur";
             weekday[5] = "Fri";
@@ -62,21 +62,8 @@
             var now = new Date();
             var month = months[now.getMonth()];
             var date = now.getDate();
-            let hours = now.getHours();
-            let mins = now.getMinutes();
-            let period = "AM";
-            if (hours > 11)
-            {
-                period = "PM";
-                if(hours > 12)
-                hours -=12;
-            }
-            if (mins < 10)
-            {
-                mins = "0" + mins;
-            }
             let today_date = document.getElementById("today_date");
-            today_date.innerText = date "" month;
+            today_date.innerText = day " " month;
         }
         getCurrentTime();
 </script>
